@@ -4,7 +4,7 @@
 
 ### Register
 
-![register](/Users/rex/Desktop/cs103a-cpa02/Screenshots/register.png)
+![register](Screenshots/register.png)
 
 ### Login
 
