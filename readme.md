@@ -8,15 +8,15 @@
 
 ### Login
 
-![login](/Users/rex/Desktop/cs103a-cpa02/Screenshots/login.png)
+![login](Screenshots/login.png)
 
 ### Main Page
 
-![main](/Users/rex/Desktop/cs103a-cpa02/Screenshots/main.png)
+![main](Screenshots/main.png)
 
 ### Search
 
-![search](/Users/rex/Desktop/cs103a-cpa02/Screenshots/search.png)
+![search](Screenshots/search.png)
 
 ## How to Setup
 
