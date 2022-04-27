@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("../partials/Meta/defaultHeadData.ejs") %> 
+    <link rel="stylesheet" href="/Stylesheets/CSS/login.css">
+</head>
+<body>
+    <%- include(`../partials/navbar.ejs`) %> 
+    
+    <%- include ('../partials/authentication/authenticationForm.ejs', {
+        title: "Sign In",
+        route: "/login",
+        altAuthLink: "/register",
+        altAuthText: "Create Account"
+    }) %> 
+
+    <%- include('../partials/footer.ejs') %> 
+</body>
+</html>

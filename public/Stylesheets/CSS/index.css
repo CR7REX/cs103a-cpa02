@@ -1,0 +1,48 @@
+.title {
+  border-bottom: 1px solid white;
+  border-bottom-width: 80% !important;
+}
+
+.subTitle {
+  text-align: center;
+  font-family: 'Tangerine', cursive;
+}
+
+@media only screen and (max-width: 768px) {
+  .favourites {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .row-md {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .favourites-header {
+    text-align: center !important;
+    margin: auto;
+    display: block;
+  }
+  .favourites-title {
+    margin-bottom: 2em;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .card-info {
+    font-size: 78%;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .card-info {
+    font-size: 60%;
+  }
+  .card {
+    width: 100% !important;
+  }
+}

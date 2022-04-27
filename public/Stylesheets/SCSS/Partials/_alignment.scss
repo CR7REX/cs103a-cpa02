@@ -1,0 +1,20 @@
+@mixin vertical-align{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin horizontal-align {
+    width: 50%;
+    margin: auto;
+}
+
+@mixin align-form-vertically{
+    margin: 0;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

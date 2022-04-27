@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("../partials/Meta/defaultHeadData.ejs") %> 
+    <link rel="stylesheet" href="/Stylesheets/CSS/show.css">
+</head>
+<body>
+    <% const team = teamData.teams[0]; %> 
+    <% const smallData = [
+        {title: "Nicknames:", content: team.strKeywords},
+        {title: "Founded:", content: team.intFormedYear},
+        {title: "League:", content: team.strLeague},
+        {title: "Stadium Name:", content: team.strStadium},
+        {title: "Capacity:", content: team.intStadiumCapacity},
+        {title: "Stadium Location:", content: team.strStadiumLocation},
+        {title: "Gender:", content: team.strGender},
+    ] %> 
+
+    <%- include ("../partials/Show/show.ejs", {
+        isFav,
+        smallData,
+        fixtures,
+        results,
+        swapFixtureDateAround,
+        fixtureBadges,
+        resultBadges,
+
+        name:                       team.strTeam,
+        id:                         team.idTeam,
+        facebookLink:               team.strFacebook,
+        twitterLink:                team.strTwitter,
+        instagramLink:              team.strInstagram,
+        description:                team.strDescriptionEN,
+        countryFlag:                countryFlags[team.strCountry],
+        img:                        team.strTeamBadge,
+        type:                       "team",
+        carouselImg1:               team.strTeamFanart1,
+        carouselImg2:               team.strTeamFanart2,
+        carouselImg3:               team.strTeamFanart3,
+        carouselImg4:               team.strTeamLogo,
+        carouselImg5:               team.strTeamFanart4,
+        carouselImg6:               null,
+        otherImgRightTitle:         "Kit:",
+        otherImgRight:              team.strTeamJersey,
+        otherImgRightTooltip:       "",
+        otherImgLeftTooltip:        team.strCountry,
+        stadiumPic:                 team.strStadiumThumb,
+        stadiumDescription:         team.strStadiumDescription,
+    }) %> 
+
+    <%- include('../partials/footer.ejs') %> 
+</body>
+</html>

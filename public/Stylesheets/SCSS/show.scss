@@ -1,0 +1,146 @@
+$inherited-colour: white;
+@import './Partials/BSScreenSizes';
+@import './Partials/alignment';
+@import './Partials/instagramBackground';
+
+@mixin removeButtonClickFeedback {
+	&:active,
+	&:focus {
+		outline: none;
+		border: none;
+	}
+}
+
+.scrollBox {
+	overflow: auto;
+	height: 200px;
+	width: auto;
+}
+
+h1 {
+	border-bottom: 2px solid $inherited-colour;
+}
+
+.fa-star {
+	color: gold;
+	font-size: x-large;
+}
+
+.favourite-button {
+	border: none;
+	background: none;
+
+	@include removeButtonClickFeedback();
+}
+
+.cutout {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	left: 0;
+	bottom: 0;
+	object-fit: contain;
+	overflow: hidden;
+}
+
+.flag-bg-img {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.4), 0 6px 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+a {
+	.fab {
+		margin: 0px 8px;
+		color: white;
+		text-decoration: initial;
+	}
+
+	.fa-facebook:hover {
+		color: #3b5998;
+	}
+
+	.fa-twitter:hover {
+		color: #00acee;
+	}
+
+	.fa-instagram:hover {
+		@include instaBackground;
+	}
+}
+
+.carousel-item {
+	img {
+		object-fit: contain;
+		height: 200px;
+		width: 100%;
+	}
+}
+
+.small-data {
+	margin-top: 2.25em;
+}
+
+.other-img-right,
+.other-img-left {
+	height: 155px;
+	width: auto;
+}
+
+.other-img-left {
+	width: max-content;
+}
+
+hr {
+	border-top: 1px solid rgba(255, 255, 255, 0.486);
+	width: 65%;
+}
+
+.stadium-pic {
+	border: 4px solid white;
+	width: 100%;
+	height: 100%;
+	filter: grayscale(100%);
+}
+
+.fixture-badges {
+	height: 7%;
+	width: 10%;
+}
+
+.profile-img {
+	@include horizontal-align;
+}
+
+@media only screen and (max-width: map-get($Bootstrap-screen-sizes, extra-small)) {
+	.profile-img,
+	.slideshow {
+		@include horizontal-align();
+		margin-bottom: 2em;
+	}
+
+	.fa-star {
+		margin-top: 0.5em;
+	}
+
+	.scrollBox {
+		height: 300px;
+	}
+
+	.slideshow {
+		margin-top: 1.5em;
+	}
+
+	.game-info-title {
+		margin-top: 5em;
+	}
+}
+
+@media only screen and (max-width: map-get($Bootstrap-screen-sizes, large)) {
+	.stadium-pic {
+		width: 80%;
+		height: 80%;
+	}
+}

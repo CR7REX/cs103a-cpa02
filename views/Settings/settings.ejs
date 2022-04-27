@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("../partials/Meta/defaultHeadData.ejs") %> 
+    <link rel="stylesheet" href="/Stylesheets/CSS/settings.css">
+</head>
+<body>
+    <%- include ("../partials/navbar.ejs") %> 
+
+    <u><h1 class="text-center">Settings</h1></u>
+
+    <div class="settings">
+        <form action="settings/configureSettings" method="POST">
+            <label for="darkMode">Dark Mode</label>
+            <% if (darkMode) { %>
+                <input type="checkbox" name="darkMode" id="darkMode" checked>
+            <% } else { %>
+                <input type="checkbox" name="darkMode" id="darkMode">
+            <% } %> 
+            <button type="submit" class="d-block mt-5 mx-auto btn btn-danger">Done</button>
+        </form>
+    </div>
+</body>

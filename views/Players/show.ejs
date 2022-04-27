@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("../partials/Meta/defaultHeadData.ejs") %> 
+    <link rel="stylesheet" href="/Stylesheets/CSS/show.css">
+</head>
+<body>
+    <% const player = playerData.players[0]; %> 
+    <% let team %> 
+    <% if (playersTeam === null) { %>
+        <%  team = {strTeamBadge: 'https://www.clipartmax.com/png/middle/307-3077324_x-mark-cross-computer-icons-clip-art-red-cross-icon.png',
+                        strTeam: 'None', idTeam: null} %> 
+    <% } else { %>
+        <%  team = playersTeam.teams[0]; %> 
+    <% } %> 
+    <% let playerProfilePic = player.strCutout %>
+    <% if (playerProfilePic === null) { %>
+        <% playerProfilePic = player.strThumb %> 
+    <% } %> 
+    <% const smallData = [
+                {title: "Hometown:", content: player.strBirthLocation},
+                {title: "Age:", content: calculatePlayerAge(player.dateBorn)},
+                {title: "Wage:", content: player.strWage},
+                {title: "Agent:", content: player.strAgent},
+                {title: "Price Tag:", content: player.strSigning},
+                {title: "Height:", content: player.strHeight},
+                {title: "Weight:", content: player.strWeight},
+                {title: "Position:", content: player.strPosition},
+            ] %> 
+    <%- include ("../partials/Show/show.ejs", {
+        isFav,
+        smallData,
+        name:                   player.strPlayer,
+        id:                     player.idPlayer,
+        facebookLink:           player.strFacebook,
+        twitterLink:            player.strTwitter,
+        instagramLink:          player.strInstagram,
+        description:            player.strDescriptionEN,
+        countryFlag:            countryFlags[player.strNationality],
+        img:                    playerProfilePic,
+        type:                   "player",
+        carouselImg1:           player.strThumb,
+        carouselImg2:           player.strRender,
+        carouselImg3:           player.strFanart1,
+        carouselImg4:           player.strFanart2,
+        carouselImg5:           player.strFanart3,
+        carouselImg6:           player.strFanart4,
+        otherImgRightTitle:     "Club:",
+        otherImgRight:          team.strTeamBadge,
+        otherImgRightTooltip:   team.strTeam,
+        otherImgLeftTooltip:    player.strNationality,
+        link:                   `goToteam/${team.idTeam}`
+    }) %> 
+    <%- include('../partials/footer.ejs') %> 
+</body>
+</html>

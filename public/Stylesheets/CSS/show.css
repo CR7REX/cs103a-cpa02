@@ -1,0 +1,138 @@
+.scrollBox {
+  overflow: auto;
+  height: 200px;
+  width: auto;
+}
+
+h1 {
+  border-bottom: 2px solid white;
+}
+
+.fa-star {
+  color: gold;
+  font-size: x-large;
+}
+
+.favourite-button {
+  border: none;
+  background: none;
+}
+
+.favourite-button:active, .favourite-button:focus {
+  outline: none;
+  border: none;
+}
+
+.cutout {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+}
+
+.flag-bg-img {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  -webkit-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.4), 0 6px 30px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.4), 0 6px 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+a .fab {
+  margin: 0px 8px;
+  color: white;
+  text-decoration: initial;
+}
+
+a .fa-facebook:hover {
+  color: #3b5998;
+}
+
+a .fa-twitter:hover {
+  color: #00acee;
+}
+
+a .fa-instagram:hover {
+  background: #f09433;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.carousel-item img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 200px;
+  width: 100%;
+}
+
+.small-data {
+  margin-top: 2.25em;
+}
+
+.other-img-right,
+.other-img-left {
+  height: 155px;
+  width: auto;
+}
+
+.other-img-left {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.486);
+  width: 65%;
+}
+
+.stadium-pic {
+  border: 4px solid white;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.fixture-badges {
+  height: 7%;
+  width: 10%;
+}
+
+.profile-img {
+  width: 50%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 575px) {
+  .profile-img,
+  .slideshow {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 2em;
+  }
+  .fa-star {
+    margin-top: 0.5em;
+  }
+  .scrollBox {
+    height: 300px;
+  }
+  .slideshow {
+    margin-top: 1.5em;
+  }
+  .game-info-title {
+    margin-top: 5em;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .stadium-pic {
+    width: 80%;
+    height: 80%;
+  }
+}
